@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transformata Fouriera</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10fr 1fr;
+        gap: 50px;
+        margin: 50px;
+      }
+
+      #points {
+        grid-column: 1;
+        resize: none;
+      }
+
+      #button {
+        grid-column: 1;
+      }
+
+      #canvas {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <textarea id="points" disabled="true"></textarea>
+      <button id="button">Nowy rysunek</button>
+      <canvas id="canvas" height=800 width=800>
+    </div>
+    <script src="fox_points.js"></script>
+    <script src="dft.js"></script>
+    <script src="circles.js"></script>
+    <script src="skrypt.js"></script>
+  </body>
+</html>
